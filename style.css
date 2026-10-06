@@ -1,0 +1,819 @@
+/* =========================================
+   FASHIONKU - MODERN E-COMMERCE STYLE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 23px;
+    letter-spacing: 0.5px;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    transition: 0.25s;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.container h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.container > p {
+    color: #6b7280;
+}
+
+
+/* =========================================
+   PRODUK GRID
+========================================= */
+
+.produk-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   CARD PRODUK
+========================================= */
+
+.produk {
+    background: white;
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e5e7eb;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.produk:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+}
+
+.produk h3 {
+    margin: 12px 0 8px;
+    font-size: 18px;
+}
+
+.produk h3 a {
+    transition: 0.2s;
+}
+
+.produk h3 a:hover {
+    color: #e11d48 !important;
+}
+
+.produk p {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+
+/* =========================================
+   GAMBAR PRODUK
+========================================= */
+
+.produk .gambar-produk {
+    width: 100% !important;
+    height: 210px !important;
+    max-width: 100% !important;
+    max-height: 210px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 15px auto !important;
+    border-radius: 12px;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+.produk:hover .gambar-produk {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   HARGA
+========================================= */
+
+.harga {
+    color: #e11d48;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #111827, #374151);
+    color: white;
+    text-decoration: none;
+    padding: 11px 17px;
+    border-radius: 9px;
+    margin-top: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(17, 24, 39, 0.25);
+}
+
+
+/* =========================================
+   PILIHAN UKURAN & WARNA
+========================================= */
+
+.pilihan {
+    margin-top: 15px;
+}
+
+.pilihan p {
+    margin-top: 12px;
+    margin-bottom: 7px;
+    color: #374151;
+}
+
+.pilihan-btn {
+    padding: 8px 13px;
+    margin-right: 5px;
+    margin-bottom: 7px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pilihan-btn:hover {
+    border-color: #111827;
+    transform: translateY(-1px);
+}
+
+.pilihan-btn.aktif {
+    background: #111827;
+    color: white;
+    border-color: #111827;
+}
+
+
+/* =========================================
+   PILIHAN TERPILIH
+========================================= */
+
+#pilihan-produk,
+[id^="pilihan-"] {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #374151;
+}
+
+
+/* =========================================
+   JUMLAH BARANG
+========================================= */
+
+.jumlah {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.jumlah-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.jumlah-btn:hover {
+    background: #374151;
+    transform: scale(1.05);
+}
+
+.jumlah span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.total {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-top: 25px;
+    text-align: right;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-top: 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    font-size: 15px;
+    background: white;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #111827;
+    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 25px;
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.filter-form input {
+    width: 200px;
+}
+
+.filter-form select {
+    width: 200px;
+}
+
+.filter-form .btn {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   ADMIN / TABLE
+========================================= */
+
+table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tabel-pesanan {
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.tabel-pesanan th {
+    background: #111827 !important;
+    color: white;
+}
+
+.tabel-pesanan tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+.tabel-pesanan tr:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-form {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+/* =========================================
+   LOGIN / REGISTER
+========================================= */
+
+.login-box,
+.register-box {
+    max-width: 450px;
+    margin: 60px auto;
+}
+
+.login-box h1,
+.register-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CARD UMUM
+========================================= */
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    border: 1px solid #e5e7eb;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   DETAIL PESANAN
+========================================= */
+
+.detail-box {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+.wishlist-btn {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 9px;
+    background: #fff1f2;
+    color: #e11d48;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.wishlist-btn:hover {
+    background: #ffe4e6;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   NOTIFIKASI
+========================================= */
+
+.notifikasi {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #111827;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    background: #111827;
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar div {
+        justify-content: center;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .container h1 {
+        font-size: 25px;
+    }
+
+    .produk-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .produk {
+        padding: 13px;
+    }
+
+    .produk .gambar-produk {
+        height: 160px !important;
+    }
+
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-form input,
+    .filter-form select {
+        width: 100%;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .produk-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================
+   RATING BINTANG - ULASAN
+========================================= */
+
+.rating-bintang {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 6px;
+    margin: 10px 0 25px;
+}
+
+.rating-bintang input {
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    pointer-events: none !important;
+}
+
+.rating-bintang label {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    font-size: 45px !important;
+    line-height: 1 !important;
+    color: #d1d5db !important;
+
+    cursor: pointer !important;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.rating-bintang label:hover,
+.rating-bintang label:hover ~ label {
+    color: #fbbf24 !important;
+    transform: scale(1.1);
+}
+
+/* Saat dipilih */
+.rating-bintang input:checked ~ label {
+    color: #fbbf24 !important;
+}
+
+/* Efek saat mouse dilepas */
+.rating-bintang label:active {
+    transform: scale(0.95);
+}
+
+/* =========================================
+   PRODUK TERLARIS
+========================================= */
+
+.terlaris-section {
+
+    margin: 35px 0;
+
+}
+
+
+.terlaris-header {
+
+    margin-bottom: 18px;
+
+}
+
+
+.terlaris-header h2 {
+
+    font-size: 24px;
+
+    color: #111827;
+
+    margin-bottom: 4px;
+
+}
+
+
+.terlaris-header p {
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+}
+
+
+.terlaris-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.terlaris-card {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 16px;
+
+    min-height: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.05);
+
+    transition: .2s;
+
+}
+
+
+.terlaris-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.10);
+
+}
+
+
+.ranking {
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.terlaris-info h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 7px;
+
+    color: #111827;
+
+}
+
+
+.terlaris-info p {
+
+    color: #e11d48;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.terlaris-badge {
+
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 5px 8px;
+
+    background: #fff1f2;
+
+    color: #e11d48;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    width: fit-content;
+
+}
+
+
+.terlaris-kosong {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    color: #6b7280;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .terlaris-list {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .terlaris-card {
+
+        padding: 13px;
+
+        min-height: 135px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .terlaris-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}

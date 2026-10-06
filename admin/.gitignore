@@ -1,0 +1,12 @@
+# Konfigurasi database lokal
+koneksi.php
+
+# Bukti pembayaran customer
+bukti_pembayaran/
+
+# File temporary
+*.log
+
+# File sistem Windows
+Thumbs.db
+desktop.ini
